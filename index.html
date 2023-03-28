@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="abc.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- <div class="question">
+        <p>2+2</p>
+        <div class="options">1,2,3,4</div>
+      </div> -->
+      <div id="screen1" class="screen">
+        <button id="btn">Start Quiz</button>
+      </div>
+      <div id="screen2" class="screen">
+        <p>Timer<span class="timer"></span></p>
+        <!-- <p>Score<span class="score"></span></p> -->
+        <p>2+2</p>
+        <input type="radio" class="q1" id="html" name="fav_language" value="HTML" />
+        <label for="html">4</label><br />
+        <input type="radio" class="q1" id="css" name="fav_language" value="CSS" />
+        <label for="css">3</label><br />
+        <input
+          type="radio"
+          class="q1"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">2</label>
+        <input
+          type="radio"
+          class="q1"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">1</label>
+      </div>
+      <div id="screen3" class="screen">
+        <p>Timer<span class="timer2"></span></p>
+        <!-- <p>Score<span class="score"></span></p> -->
+        <p>3*3</p>
+        <input type="radio" class="q2" id="html" name="fav_language" value="HTML" />
+        <label for="html">9</label><br />
+        <input type="radio" class="q2" id="css" name="fav_language" value="CSS" />
+        <label for="css">4</label><br />
+        <input
+          type="radio"
+          class="q2"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">8</label>
+        <input
+          type="radio"
+          class="q2"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">2</label>
+      </div>
+      <div id="screen4" class="screen">
+        <p>Timer<span class="timer3"></span></p>
+        <!-- <p>Score<span class="score"></span></p> -->
+        <p>2+2+2</p>
+        <input type="radio" class="q3" id="html" name="fav_language" value="HTML" />
+        <label for="html">5</label><br />
+        <input type="radio" class="q3" id="css" name="fav_language" value="CSS" />
+        <label for="css">6</label><br />
+        <input
+          type="radio"
+          class="q3"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">7</label>
+        <input
+          type="radio"
+          class="q3"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">8</label>
+      </div>
+      <div id="screen5" class="screen">
+        <p>Timer<span class="timer4"></span></p>
+        <!-- <p>Score<span class="score"></span></p> -->
+        <p>2+2-2</p>
+        <input type="radio" class="q4" id="html" name="fav_language" value="HTML" />
+        <label for="html">0</label><br />
+        <input type="radio" class="q4" id="css" name="fav_language" value="CSS" />
+        <label for="css">1</label><br />
+        <input
+          type="radio"
+          class="q4"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">2</label>
+        <input
+          type="radio"
+          class="q4"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">3</label>
+      </div>
+      <div id="screen6" class="screen">
+        <p>Timer<span class="timer5"></span></p>
+        <!-- <p>Score<span class="score"></span></p> -->
+        <p>3+3-6</p>
+        <input type="radio" id="html" name="fav_language" value="HTML" />
+        <label for="html">0</label><br />
+        <input type="radio" id="css" name="fav_language" value="CSS" />
+        <label for="css">7</label><br />
+        <input
+          type="radio"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">9</label>
+        <input
+          type="radio"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">4</label>
+      </div>
+      <div id="screen7" class="screen">
+        <p>You score is</p>score<p>out of 5 questions</p></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const btn = document.querySelector("#btn");
+    const screen1 = document.querySelector("#screen1");
+    const screen2 = document.querySelector("#screen2");
+    const screen3 = document.querySelector("#screen3");
+    const timerP = document.querySelector(".timer");
+    const timerQ = document.querySelector(".timer2");
+    const timerR = document.querySelector(".timer3");
+    const timerS = document.querySelector(".timer4");
+    const timerT = document.querySelector(".timer5");
+    const scoreP = document.querySelector(".score");
+    let selectop = document.querySelectorAll('.q1') 
+    console.log(q1.value);
+
+    let timer = 5;
+    let timer2 = 10;
+    let timer3 = 15;
+    let timer4 = 20;
+    let timer5 = 25;
+    let score = 0;
+
+    btn.onclick = () => {
+      screen1.style.display = "none";
+      screen2.style.display = "flex";
+    };
+    let x = setInterval(() => {
+      {
+        if (timer === 1) clearInterval(x);
+        timerP.innerHTML = --timer;
+        if (timer == 0) {
+          screen2.style.display = "none";
+          screen3.style.display = "flex";
+        }
+      }
+    }, 1000);
+
+    let y = setInterval(() => {
+      {
+        if (timer2 === 1) clearInterval(x);
+        timerQ.innerHTML = --timer2;
+        if (timer2 == 0) {
+          screen3.style.display = "none";
+          screen4.style.display = "flex";
+        }
+      }
+    }, 1000);
+    let z = setInterval(() => {
+      {
+        if (timer3 === 1) clearInterval(x);
+        timerR.innerHTML = --timer3;
+        if (timer3 == 0) {
+          screen4.style.display = "none";
+          screen5.style.display = "flex";
+        }
+      }
+    }, 1000);
+    let a = setInterval(() => {
+      {
+        if (timer4 === 1) clearInterval(x);
+        timerS.innerHTML = --timer4;
+        if (timer4 == 0) {
+          screen5.style.display = "none";
+          screen6.style.display = "flex";
+        }
+      }
+    }, 1000);
+    let b = setInterval(() => {
+      {
+        if (timer5 === 1) clearInterval(x);
+        timerT.innerHTML = --timer5;
+        if (timer5 == 0) {
+          screen6.style.display = "none";
+          screen7.style.display = "flex";
+        }
+      }
+    }, 1000);
+
+    // const questions = [
+    //   {
+    //     question: "2+2",
+    //     answer: 4,
+    //     options: [1, 2, 3, 4],
+    //   },
+    //   {
+    //     question: "2+2",
+    //     answer: 4,
+    //     options: [1, 2, 3, 4],
+    //   },
+    //   {
+    //     question: "2+2",
+    //     answer: 4,
+    //     options: [1, 2, 3, 4],
+    //   },
+    //   {
+    //     question: "2+2",
+    //     answer: 4,
+    //     options: [1, 2, 3, 4],
+    //   },
+    //   {
+    //     question: "2+2",
+    //     answer: 4,
+    //     options: [1, 2, 3, 4],
+    //   },
+    // ];
+    // for (let i = 0; i < questions.length; i++) {
+    //   // const quiz = document.createElement("div");
+    //   // quiz.setAttribute("class", "question");
+    //   // const para = document.createElement("p");
+    //   // para.innerHTML = questions[i].question;
+    //   // const options1 = document.createElement("div");
+    //   // options1.setAttribute("class", "options");
+    //   // options1.innerHTML = questions[i].options;
+    //   // quiz.append(para);
+    //   // quiz.append(options1);
+    //   // document.querySelector("#wrapper").append(quiz);
+    // }
+  </script>
+</html>

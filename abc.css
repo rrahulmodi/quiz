@@ -6,45 +6,10 @@
 .screen {
   height: 100vh;
   display: flex;
-}
-
-#screen1 {
   justify-content: center;
   align-items: center;
 }
-#screen2 {
+#screen2, #screen3 {
   display: none;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#screen3 {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#screen4 {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#screen5 {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#screen6 {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#screen7 {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
